@@ -1,13 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bidule</title>
+  <title>I see you</title>
+  <link href="../css/output.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/botiful.jpg" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
 
-  <h1>chose</h1>
+<div class="dock fixed bottom-0 left-0 right-0 flex justify-center bg-transparent z-50">
 
+  <button><a href="calculatrice.html" class="hover:scale-105 transition" title="Calculatrice"><ion-icon name="calculator-outline" size="large"></ion-icon></a></button>
+
+  <button><a href="index.html" class="hover:scale-105 transition" title="CV"><ion-icon name="newspaper-outline" size="large"></ion-icon></a></button>
+
+  <button><a href="home.html" class="hover:scale-105 transition" title="Home"><ion-icon name = "home-outline" size ="large"></ion-icon></a></button>
+
+  <button><a href="contact.html" class="hover:scale-105 transition" title="Contact"><ion-icon name="person-circle-outline" size="large"></ion-icon></a></button>
+
+  <button><a href="quiz.html" class="hover:scale-105 transition" title="Quiz"><ion-icon name="help-outline" size="large"></ion-icon></a></button>
+</div>
+
+<body class="m-0 p-0 animate-fadeIn bg-transparent font-sans overflow-x-hidden">
+  <video autoplay muted loop class="fixed top-0 left-0 w-screen h-screen object-cover -z-10">
+    <source src="../images/background.mp4" type="video/mp4">
+  </video>
+
+  <div class="flex animate-fadeIn justify-center p-[4vh_2vw] relative z-[1]">
+
+    <div class="p-8 max-w-[90rem] bg-[#303033] text-white shadow-[0_0_20px_rgba(225,219,219,0.4)] flex flex-col items-center rounded">
+      <div>
+        <header>
+          <div class="flex justify-evenly flex-wrap">
+            <div>
+              <label class="swap swap-flip text-9xl">
+                <input type="checkbox" />
+                <div class="swap-on"><img src="../images/cthun-chan.png" alt="Profile Picture" class="w-[150px] h-[150px] rounded-[30%] border-[4px] border-[#e0ece2] object-cover"></div>
+                <div class="swap-off"><img src="../images/cthunshattered.png" alt="Profile Picture" class="w-[150px] h-[150px] rounded-[30%] border-[4px] border-[#e0ece2] object-cover"></div>
+              </label>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold text-white">C'thun</h1>
+              <p class="text-lg text-[#cccccc]">AKA : Kuh-THOON</p>
+              <p class="text-[#bbbbbb] mt-1">Email: KUH@TOOOOOON.chaos | Téléphone : Télépathie seulement</p>
+              <p class="text-[#bbbbbb] mt-1">Née à Silithus en Azeroth depuis la création du monde</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="mt-8">
+          <h2 class="border-b-2 border-[#cecdd4] pb-1 mb-4 font-semibold text-xl">Profil</h2>
+          <p class="font-bold text-white"><b>Cri de guerre :</b> Inflige des dégâts égaux à l'Attaque de ce serviteur répartis aléatoirement entre tous les adversaires.</p>
+          <p class="font-bold text-white">Pendant 3 mois entier, personne pouvait le vaincre puisqu'il était mathématiquement impossible à tuer.</p>
+          <p class="font-bold text-white">Recherche un job pour se payer une lentille de 100 m².</p>
+        </section>
+
+        <section class="mt-8">
+          <h2 class="border-b-2 border-[#cecdd4] pb-1 mb-4 font-semibold text-xl">Compétence</h2>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold">Fais mal</h3>
+            <progress class="progress progress-error w-full" value="60" max="100"></progress>
+          </div>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold">Impossible à vaincre.</h3>
+            <progress class="progress progress-primary w-full" value="100" max="100"></progress>
+          </div>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold">Le goat</h3>
+            <progress class="progress progress-success w-full" value="100" max="100"></progress>
+          </div>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold">Dealer de corruption</h3>
+            <progress class="progress progress-warning w-full" value="50" max="100"></progress>
+          </div>
+        </section>
+
+        <section class="mt-8">
+          <h2 class="border-b-2 border-[#cecdd4] pb-1 mb-4 font-semibold text-xl">Expérience</h2>
+          <div class="mb-6">
+            <h3 class="font-bold text-white">- Emprisoné par les titans pour avoir contrôlé Azeroth</h3>
+            <p class="italic text-[#cccccc]">Création du monde - Quelques millénaires auparavant</p>
+            <ul class="ml-6 mt-2 text-white list-disc">
+              <li>En détention, création d'une légion anti-draconique</li>
+              <li>Corruption des esprits.</li>
+              <li>Murmures du chaos et de la folie</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-white">- Dieu très ancien du chaos et de la folie</h3>
+            <p class="italic text-[#cccccc]">Offre de séances Thérapeutes gratuites</p>
+            <ul class="ml-6 mt-2 text-white list-disc">
+              <li>Entre facilement dans les esprits mortels.</li>
+              <li>Comprend le subconscient mieux que le patient.</li>
+              <li>Comprend la mort puisqu'il a l'immortalité</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mt-8">
+          <h2 class="border-b-2 border-[#cecdd4] pb-1 mb-4 font-semibold text-xl">Talent</h2>
+          <div class="font-bold text-white">
+            <p>Beaucoup de tentacules</p>
+            <p>Immortel</p>
+            <p>Vue à 360 degrès et multi-dimensionnel</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+<script src="../js/click.js"></script>
 </body>
 </html>
