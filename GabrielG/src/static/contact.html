@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bidule</title>
+  <title>I see you</title>
+  <link href="../css/output.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
 
-  <h1>chose</h1>
+<body class="min-h-screen bg-[#072646] text-white flex flex-col justify-center items-center p-8 animate-fadeIn overflow-x-hidden">
+
+  <div class="dock fixed bottom-0 left-0 right-0 flex justify-center bg-transparent z-50 gap-4 p-4">
+    <a href="calculatrice.html" title="Calculatrice" class="hover:scale-105 transition-transform">
+      <ion-icon name="calculator-outline" size="large"></ion-icon>
+    </a>
+    <a href="index.html" title="CV" class="hover:scale-105 transition-transform">
+      <ion-icon name="newspaper-outline" size="large"></ion-icon>
+    </a>
+    <a href="home.html" title="Home" class="hover:scale-105 transition-transform">
+      <ion-icon name="home-outline" size="large"></ion-icon>
+    </a>
+    <a href="contact.html" title="Contact" class="hover:scale-105 transition-transform">
+      <ion-icon name="person-circle-outline" size="large"></ion-icon>
+    </a>
+    <a href="quiz.html" title="Quiz" class="hover:scale-105 transition-transform">
+      <ion-icon name="help-outline" size="large"></ion-icon>
+    </a>
+  </div>
+
+  <div class="bg-gray-100 text-gray-900 rounded-xl shadow-lg p-10 w-full max-w-4xl">
+    <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Une Question ?</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+      <input type="hidden" name="access_key" value="762a13ab-5fc6-4849-b798-a2d6eb21a645">
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-600 mb-1">Prénom</label>
+          <input type="text" name="name" placeholder="Votre nom" required class="border-b-2 border-gray-300 focus:border-pink-600 outline-none text-gray-700 py-2 bg-transparent">
+        </div>
+        <div class="flex flex-col">
+          <label class="text-sm text-gray-600 mb-1">Email (Exemple : xxx@xxx.xxx)</label>
+          <input type="email" name="email" placeholder="Votre email" required class="border-b-2 border-gray-300 focus:border-pink-600 outline-none text-gray-700 py-2 bg-transparent">
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-sm text-gray-600 mb-1">Message</label>
+        <textarea name="message" placeholder="Votre message..." rows="4" required class="border-b-2 border-gray-300 focus:border-pink-600 outline-none text-gray-700 py-2 bg-transparent resize-none"></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="bg-pink-500 hover:bg-indigo-500 text-white font-semibold py-2 px-8 rounded-lg shadow-md transition">
+          Envoyer ->
+        </button>
+      </div>
+    </form>
+    <p class="text-sm text-gray-500 text-center mt-6">
+      On vous répondra dans 450 années environ.
+    </p>
+  </div>
+
+  <div id="quizModal" class="flex hidden fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50">
+    <div class="bg-white text-black rounded-lg p-6 max-w-md text-center shadow-lg">
+      <h3 class="text-lg font-bold mb-4">Quiz non terminé</h3>
+      <p class="mb-6">Vous devez terminer le quiz avant d'accéder au formulaire de contact.</p>
+      <button id="closeModalBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        OK
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/click.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script src="../js/contact.js"></script>
 
 </body>
 </html>
