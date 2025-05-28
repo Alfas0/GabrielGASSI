@@ -1,13 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bidule</title>
+  <title>I see you</title>
+  <link href="../css/output.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/botiful.jpg" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
 
-  <h1>chose</h1>
+<body class="h-screen animate-fadeIn flex flex-col items-center justify-between p-4 bg-amber-100">
+
+  <video autoplay muted loop class="fixed top-0 left-0 w-screen h-screen object-cover -z-10">
+    <source src="../images/background2.mp4" type="video/mp4">
+  </video>
+
+  <audio id="themeMusic" src="../images/musictheme.mp3" loop></audio>
+
+  <div class ="h-[95%] w-[50%]
+  
+  flex flex-col items-center justify-between p-4 shadow-[0_0_20px_rgba(225,219,219,0.4)]">
+    
+    <div class="flex flex-wrap justify-between items-center w-full max-w-screen-md gap-4">
+      <a href="calculatrice.html" class="hover:scale-105 transition" title="Calculatrice"><ion-icon name="calculator-outline" size="large"></ion-icon></a>
+      <a href="index.html" class="hover:scale-105 transition" title="CV"><ion-icon name="newspaper-outline" size="large"></ion-icon></a>
+      <div class="flex flex-col items-center gap-2">
+        <div id="clock" class="text-4xl sm:text-6xl font-mono"></div>
+        <label class="swap">
+          <input type="checkbox"/>
+          <svg class="swap-on fill-current w-8 h-8 sm:w-10 sm:h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23Z" />
+          </svg>
+          <svg class="swap-off fill-current w-8 h-8 sm:w-10 sm:h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z" />
+          </svg>
+        </label>
+      </div>
+      <a href="contact.html" class="hover:scale-105 transition" title="Contact"><ion-icon name="person-circle-outline" size="large"></ion-icon></a>
+      <a href="quiz.html" class="hover:scale-105 transition" title="Quiz"><ion-icon name="help-outline" size="large"></ion-icon></a>
+    </div>
+    
+
+    <div class="w-full max-w-screen-md flex flex-col items-center gap-4">
+      <div class="flex flex-row w-full gap-4 items-center">
+        <progress class="progress w-full h-2"></progress>
+        <div class="w-full transform -scale-x-100">
+          <progress class="progress w-full h-2"></progress>
+        </div>
+      </div>
+
+      <button class="btn" onclick="my_modal_2.showModal()">Old gods</button>
+
+      <div class="flex flex-row w-full gap-4 items-center">
+        <progress class="progress w-full h-2"></progress>
+          <div class="w-full transform -scale-x-100">
+            <progress class="progress w-full h-2"></progress>
+          </div>
+      </div>
+    </div>
+
+    <div class="flex justify-evenly gap-6 w-full max-w-screen-md py-4">
+      <button class="avatar w-20 h-20 ring-blue-300 rounded-full ring-2 hover:scale-105 transition" onclick="handleyoggyClick()">
+        <img src="../images/yoggy.png" id="avatars" alt="Yogg-Saron" class="w-full h-full object-cover rounded-full" />
+      </button>
+      <button class="avatar w-20 h-20 ring-green-900 rounded-full ring-2 hover:scale-105 transition" onclick="handleysharrjClick()">
+        <img src="../images/ysharrj.png" alt="Y'Shaarj" class="w-full h-full object-cover rounded-full" />
+      </button>
+      <button class="avatar w-20 h-20 ring-red-400 rounded-full ring-2 hover:scale-105 transition" onclick="handleNzothClick()">
+        <img src="../images/nzoth.png" alt="N'zoth" class="w-full h-full object-cover rounded-full" />
+      </button>
+      <button class="avatar w-20 h-20 ring-purple-700 rounded-full ring-2 hover:scale-105 transition" onclick="handlecthunClick()">
+        <img src="../images/cthun-chan.png" alt="C'thun" class="w-full h-full object-cover rounded-full" />
+      </button>
+    </div>
+  </div>
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box absolute left-20 -translate-y-1/2 w-[20%]">
+    <h3 class="font-bold text-lg">Yogg-Saron</h3>
+    <div class="py-4">
+      <label class="swap swap-flip">
+        <input type="checkbox"/>
+        <div class="swap-on">
+          <div class="perspective-[1000px]">
+">
+            <div class="card">
+              <img src="../images/yogg1.png" alt="Yogg 1" class="card-img" />
+            </div>
+          </div>
+        </div>
+        <div class="swap-off">
+          <div class="perspective-[1000px]">
+            <div class="card">
+              <img src="../images/yogg2.png" alt="Yogg 2" class="card-img" />
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+    <p class="flex text-center py-4">Les "Old gods" sont des créatures fictives dans le jeu World Of Warcraft.</p>
+    <div class = "flex text-center align-baseline">
+      <img src="../images/logo.png" class = "w-[20%] h-[20%]">
+      <p class = "flex py-4">Ils sont inclus dans le jeu de cartes Heartstone, un de mes jeux préférés.</p>
+      <img src="../images/whispers.png" class = "w-[20%] h-[20%]">
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box absolute left-20 -translate-y-1/2 w-[20%]">
+    <h3 class="font-bold text-lg">Y'Shaarj</h3>
+    <div class="py-4">
+      <label class="swap swap-flip">
+        <input type="checkbox"/>
+        <div class="swap-on">
+          <div class="perspective-[1000px]">
+            <div class="card">
+              <img src="../images/yshaarj1.png" alt="Y'Shaarj 1" class="card-img" />
+            </div>
+          </div>
+        </div>
+        <div class="swap-off">
+          <div class="perspective-[1000px]">
+            <div class="card">
+              <img src="../images/yshaarj2.png" alt="Y'Shaarj 2" class="card-img" />
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="my_modal_5" class="modal">
+  <div class="modal-box absolute left-20 -translate-y-1/2 w-[20%]">
+    <h3 class="font-bold text-lg">N'zoth</h3>
+    <div class="py-4">
+      <label class="swap swap-flip">
+        <input type="checkbox"/>
+        <div class="swap-on">
+          <div class="perspective-[1000px]">
+            <div class="card">
+              <img src="../images/nzoth1.png" alt="N'zoth 1" class="card-img" />
+            </div>
+          </div>
+        </div>
+        <div class="swap-off">
+          <div class="perspective-[1000px]">
+            <div class="card">
+              <img src="../images/nzoth2.png" alt="N'zoth 2" class="card-img" />
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="my_modal_7" class="modal">
+  <div class="modal-box  absolute left-20 -translate-y-1/2 w-[20%]">
+    <h3 class="font-bold text-lg">C'thun</h3>
+    <div class="py-4">
+      <label class="swap swap-flip">
+        <input type="checkbox"/>
+        <div class="swap-on">
+          <div class="perspective-[1000px]">
+            <div class="card">
+              <img src="../images/cthun1.png" alt="C'thun 1" class="card-img" />
+            </div>
+          </div>
+        </div>
+        <div class="swap-off">
+          <div class="perspective-[1000px]">
+            <div class="w-full h-auto transition-transform duration-500 [transform-style:preserve-3d]">
+              <img src="../images/cthun2.png" alt="C'thun 2" class="card-img" />
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+<script src="../js/clock.js"></script>
+<script src="../js/click.js"></script>
+<script src="../js/tilt_effect.js"></script>
 
 </body>
 </html>
