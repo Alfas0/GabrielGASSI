@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bidule</title>
+  <title>Calculatrice</title>
+  <link href="../css/output.css" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="images/botiful.jpg" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
+<div class="dock fixed bottom-0 left-0 right-0 flex justify-center bg-transparent z-50">
 
-  <h1>chose</h1>
+  <button><a href="calculatrice.html" class="hover:scale-105 transition" title="Calculatrice"><ion-icon name="calculator-outline" size="large"></ion-icon></a></button>
 
+  <button><a href="index.html" class="hover:scale-105 transition" title="CV"><ion-icon name="newspaper-outline" size="large"></ion-icon></a></button>
+
+  <button><a href="home.html" class="hover:scale-105 transition" title="Home"><ion-icon name = "home-outline" size ="large"></ion-icon></a></button>
+
+  <button><a href="contact.html" class="hover:scale-105 transition" title="Contact"><ion-icon name="person-circle-outline" size="large"></ion-icon></a></button>
+
+  <button><a href="quiz.html" class="hover:scale-105 transition" title="Quiz"><ion-icon name="help-outline" size="large"></ion-icon></a></button>
+</div>
+
+<body class="flex animate-fadeIn flex-col md:flex-row min-h-screen bg-gray-100">
+
+  <div class="flex flex-1 justify-center items-center px-4">
+    <div class="bg-base-200 rounded-xl shadow-lg p-6 w-full max-w-xs sm:max-w-sm">
+      <input id="display" type="text" class="input input-bordered input-lg w-full mb-4 text-right text-2xl font-mono" readonly value="" placeholder="0"/>
+      
+      <div class="grid grid-cols-4 gap-3">
+        <button class="btn btn-secondary" data-value="(">(</button>
+        <button class="btn btn-secondary" data-value=")">)</button>
+        <button class="btn btn-secondary" data-value="%">mod</button>
+        <button class="btn btn-accent" data-value="/">÷</button>
+
+        <button class="btn btn-primary" data-value="7">7</button>
+        <button class="btn btn-primary" data-value="8">8</button>
+        <button class="btn btn-primary" data-value="9">9</button>
+        <button class="btn btn-accent" data-value="*">×</button>
+
+        <button class="btn btn-primary" data-value="4">4</button>
+        <button class="btn btn-primary" data-value="5">5</button>
+        <button class="btn btn-primary" data-value="6">6</button>
+        <button class="btn btn-accent" data-value="-">−</button>
+
+        <button class="btn btn-primary col-span-1" data-value="1">1</button>
+        <button class="btn btn-primary col-span-1" data-value="2">2</button>
+        <button class="btn btn-primary col-span-1" data-value="3">3</button>
+        <button class="btn btn-accent col-span-1" data-value="+">+</button>
+
+        <button class="btn btn-primary col-span-1" data-value="0">0</button>
+        <button class="btn btn-primary col-span-1" data-value=".">.</button>
+        <button class="btn btn-secondary col-span-1" id="clear">C</button>
+        <button class="btn btn-success col-span-1 row-span-2" id="equals">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="../js/calculatrice.js"></script>
+  <script src="../js/click.js"></script>
 </body>
 </html>
