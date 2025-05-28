@@ -1,5 +1,6 @@
-Ce projet est un exercice pour le cours Développement Web.
-Le projet marche normalement sans l'installation ci-dessous. Or, sur le pc de certains proches, l'installation fut nécessaire.
+## Ce projet est un exercice pour le cours Développement Web.
+
+### Le projet marche normalement sans l'utilisation de `npm install` et `npm run dev` ci-dessous. Or, sur le pc d'un proche, l'installation fut nécessaire.
 
 # Installation #
 ```bash
